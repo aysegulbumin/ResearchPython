@@ -1,0 +1,161 @@
+#!/bin/bash 
+ #SBATCH --job-name=afterOpera 
+#SBATCH --mail-type=END,FAIL 
+#SBATCH --mail-user=aysegul.bumin@ufl.edu
+#SBATCH --qos=boucher-b 
+#SBATCH --ntasks=1 
+#SBATCH --cpus-per-task=4 
+#SBATCH --mem=24gb 
+#SBATCH --time=90:00:00 
+#SBATCH --output=after.log
+#SBATCH --array=1
+date;hostname;pwd 
+run=${SLURM_ARRAY_TASK_ID}
+
+module load blat 
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram24/Amr2scaff*.psl
+
+blat output_Opera24/scaffoldSeq.fasta	histogram24/sCARDphgbU0009634150323418137ARO3000502acrFAminoglycosidesAminoglycoside_efflux_pumpsACRF.fasta histogram24/Amr2scaff1.psl 
+
+blat output_Opera24/scaffoldSeq.fasta	histogram24/sTetAJ295238geneTetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTET32.fasta histogram24/Amr2scaff2.psl 
+
+blat output_Opera24/scaffoldSeq.fasta	histogram24/sRifAP0090481gene3341RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram24/Amr2scaff3.psl 
+
+blat output_Opera24/scaffoldSeq.fasta	histogram24/sCARDpvgbAP00904837602953762710ARO3003303EscherichiaFluoroquinolonesFluoroquinoloneresistant_DNA_topoisomerasesGYRBRequiresSNPConfirmation.fasta histogram24/Amr2scaff4.psl 
+
+echo 'Done	24'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram27/Amr2scaff*.psl
+
+blat output_Opera27/scaffoldSeq.fasta	histogram27/s43L208001CLOTETPTetracyclinesTetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumpsTETB.fasta histogram27/Amr2scaff1.psl 
+
+blat output_Opera27/scaffoldSeq.fasta	histogram27/sRifNC_0025162881699RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram27/Amr2scaff2.psl 
+
+echo 'Done	27'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram103/Amr2scaff*.psl
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/s43L208001CLOTETPTetracyclinesTetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumpsTETB.fasta histogram103/Amr2scaff1.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sSulAY7582061gene7SulfonamidesSulfonamideresistant_dihydropteroate_synthasesSULI.fasta histogram103/Amr2scaff2.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sTetTet33AJ42007222940241631224TetracyclinesTetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumpsTET33.fasta histogram103/Amr2scaff3.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sTettetW_2_AY049983TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram103/Amr2scaff4.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sTettetW_1_DQ060146TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram103/Amr2scaff5.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sTettetT_2_AY660530TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETT.fasta histogram103/Amr2scaff6.psl 
+
+blat output_Opera103/scaffoldSeq.fasta	histogram103/sTetTetOM1889620721261920TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETO.fasta histogram103/Amr2scaff7.psl 
+
+echo 'Done	103'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram70/Amr2scaff*.psl
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/sTetTetWAJ222769368756061920TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram70/Amr2scaff1.psl 
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/s742JX5609921JX560992MLSStreptogramin_resistance_ATPbinding_cassette_ABC_efflux_pumpsLSA.fasta histogram70/Amr2scaff2.psl 
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/sTettetW_2_AY049983TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram70/Amr2scaff3.psl 
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/sTettetO_2_M20925TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETO.fasta histogram70/Amr2scaff4.psl 
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/sTetTet44FN59494925245271671923TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTET44.fasta histogram70/Amr2scaff5.psl 
+
+blat output_Opera70/scaffoldSeq.fasta	histogram70/sRifNC_00870214609796RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram70/Amr2scaff6.psl 
+
+echo 'Done	70'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram73/Amr2scaff*.psl
+
+blat output_Opera73/scaffoldSeq.fasta	histogram73/sgi13310176gbAF3296991betalactamsClass_A_betalactamasesGES.fasta histogram73/Amr2scaff1.psl 
+
+echo 'Done	73'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram118/Amr2scaff*.psl
+
+blat output_Opera118/scaffoldSeq.fasta	histogram118/sPhefloR_1_AF071555PhenicolPhenicol_efflux_pumpsFLOR.fasta histogram118/Amr2scaff1.psl 
+
+blat output_Opera118/scaffoldSeq.fasta	histogram118/sTettetM_8_X04388TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETM.fasta histogram118/Amr2scaff2.psl 
+
+blat output_Opera118/scaffoldSeq.fasta	histogram118/sPheAJ5188351gene6PhenicolPhenicol_efflux_pumpsFLOR.fasta histogram118/Amr2scaff3.psl 
+
+echo 'Done	118'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram122/Amr2scaff*.psl
+
+blat output_Opera122/scaffoldSeq.fasta	histogram122/sPheAJ5492141gene2PhenicolPhenicol_efflux_pumpsFEXA.fasta histogram122/Amr2scaff1.psl 
+
+blat output_Opera122/scaffoldSeq.fasta	histogram122/sPheAF231986PhenicolPhenicol_efflux_pumpsFLOR.fasta histogram122/Amr2scaff2.psl 
+
+echo 'Done	122'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram2/Amr2scaff*.psl
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sMLSMefAU7005531415311218MLSMacrolide_resistance_efflux_pumpsMEFA.fasta histogram2/Amr2scaff1.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTettetL_4_M11036TetracyclinesTetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumpsTETL.fasta histogram2/Amr2scaff2.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTetAJ295238geneTetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTET32.fasta histogram2/Amr2scaff3.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTettetX_3_AB097942TetracyclinesTetracycline_inactivation_enzymesTETX.fasta histogram2/Amr2scaff4.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sRifAP0090481gene3341RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram2/Amr2scaff5.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTettetW_2_AY049983TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram2/Amr2scaff6.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sBlaPBPEcoliCP0022916644396663401902betalactamsPenicillin_binding_proteinPBP2.fasta histogram2/Amr2scaff7.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTetTet40AM41975114211154311221TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTET40.fasta histogram2/Amr2scaff8.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sCARDphgbU0009623680382370021ARO3002985arnACationic_antimicrobial_peptidesLipid_A_modificationARNA.fasta histogram2/Amr2scaff9.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTetEU4347511gene2TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram2/Amr2scaff10.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sCARDpvgbU0009631637143165973ARO3003308EscherichiaFluoroquinolonesFluoroquinoloneresistant_DNA_topoisomerasesPARCRequiresSNPConfirmation.fasta histogram2/Amr2scaff11.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sCARDphgbNC_00777921664122167135ARO3000828baeRMultidrug_resistanceMDR_regulatorBAER.fasta histogram2/Amr2scaff12.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sCARDphgbAP00904843386244340268ARO3003576PmrCCationic_antimicrobial_peptidesLipid_A_modificationPMRC.fasta histogram2/Amr2scaff13.psl 
+
+blat output_Opera2/scaffoldSeq.fasta	histogram2/sTmttetQ_2_X58717TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETQ.fasta histogram2/Amr2scaff14.psl 
+
+echo 'Done	2'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram61/Amr2scaff*.psl
+
+blat output_Opera61/scaffoldSeq.fasta	histogram61/sgi233319gbS460631betalactamsClass_A_betalactamasesCARB.fasta histogram61/Amr2scaff1.psl 
+
+echo 'Done	61'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram74/Amr2scaff*.psl
+
+blat output_Opera74/scaffoldSeq.fasta	histogram74/sMLSErmTM64090168902735MLS23S_rRNA_methyltransferasesERMR.fasta histogram74/Amr2scaff1.psl 
+
+echo 'Done	74'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram77/Amr2scaff*.psl
+
+blat output_Opera77/scaffoldSeq.fasta	histogram77/sRifNC_0025162881699RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram77/Amr2scaff1.psl 
+
+blat output_Opera77/scaffoldSeq.fasta	histogram77/s1619AY7406811AY740681betalactamsClass_A_betalactamasesPER.fasta histogram77/Amr2scaff2.psl 
+
+echo 'Done	77'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram7/Amr2scaff*.psl
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sRifNC_0104005987325RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram7/Amr2scaff1.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sPheAF3326621gene1PhenicolPhenicol_efflux_pumpsFLOR.fasta histogram7/Amr2scaff2.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sTettetQ_1_L33696TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETQ.fasta histogram7/Amr2scaff3.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/s946DQ4648811DQ464881SulfonamidesSulfonamideresistant_dihydropteroate_synthasesSULII.fasta histogram7/Amr2scaff4.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sTettet40_1_FJ158002TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTET40.fasta histogram7/Amr2scaff5.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sRifNC_0106116233925RifampinRifampinresistant_betasubunit_of_RNA_polymerase_RpoBRPOBRequiresSNPConfirmation.fasta histogram7/Amr2scaff6.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sTetTetQZ2152336222871926TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETQ.fasta histogram7/Amr2scaff7.psl 
+
+blat output_Opera7/scaffoldSeq.fasta	histogram7/sPheFexAJQ04137214024154511428PhenicolPhenicol_efflux_pumpsFEXA.fasta histogram7/Amr2scaff8.psl 
+
+echo 'Done	7'
+rm -rf  /ufrc/boucher/aysegul.bumin/work/histogram105/Amr2scaff*.psl
+
+blat output_Opera105/scaffoldSeq.fasta	histogram105/sTettetW_6_FN396364TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETW.fasta histogram105/Amr2scaff1.psl 
+
+blat output_Opera105/scaffoldSeq.fasta	histogram105/sTetTetQZ2152336222871926TetracyclinesTetracycline_resistance_ribosomal_protection_proteinsTETQ.fasta histogram105/Amr2scaff2.psl 
+
+echo 'Done	105'
+date
