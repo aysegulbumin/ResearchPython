@@ -143,16 +143,3 @@ for name in tel.keys():
 	fil3.write(str(contig))
 	fil3.write("\n")	
 
-'''
-
-print 'B:'
-print tel['B'][0][0]
-print tel['B'][0][1]
-
-
-print 'A:'
-print tel['A'][0][0]
-print tel['A'][0][1]
-print tel['A'][1][0]
-print tel['A'][1][1]
-'''
